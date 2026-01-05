@@ -9,6 +9,12 @@ cask "posturecv" do
 
   app "PostureCV.app"
 
+  postflight do
+    system_command "xattr",
+                   args: ["-cr", "#{appdir}/PostureCV.app"],
+                   sudo: true
+  end
+
   zap trash: [
     "~/Library/Application Support/PostureCV",
     "~/Library/Caches/PostureCV",
