@@ -1,8 +1,8 @@
 cask "posturecv" do
-  version "1.0.0"
-  sha256 "50f2db1e3bb3149f972359c5b436ebf1b3c6eed6c3d73f1f581ca3d511adf3ad"
+  version "1.0.1"
+  sha256 "c135c987636c0e1ac0fdb6fc74163c1d8f419b09dd39dab4b2c2f5dad78e85ee"
 
-  url "https://github.com/richardli52/postureCV/releases/download/v#{version}/PostureCV.zip"
+  url "https://github.com/richardli52/postureCV/releases/download/v#{version}/PostureCV-v#{version}.zip"
   name "PostureCV"
   desc "Minimalist menu bar utility for posture monitoring using CV"
   homepage "https://github.com/richardli52/postureCV"
@@ -16,6 +16,7 @@ cask "posturecv" do
   end
 
   zap trash: [
+    "~/.posture_config.json",
     "~/Library/Application Support/PostureCV",
     "~/Library/Caches/PostureCV",
     "~/Library/Preferences/com.richardli.posturecv.plist",
